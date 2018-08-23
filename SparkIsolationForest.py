@@ -149,41 +149,6 @@ def predict_score(x, forest, num_samples):
 
 ###############################################################################
 
-selected_columns_categorical = [
-  'contractlabel',
-  'vehiclemodel',
-    'incidentlocationcountry',
-    'itemcode',
-    'operationalcasetypelabel',
- 'operationalcasesubtypelabel',
-    'operationalservicelabel',
-    'provider_status_lb',
- 'provider_type_code',
- 'provider_speciality_lb',
-    'providerinvoicestatus',
-    'providerinvoicelinestatuslabel',
-    'assistedpersonzipcode',
-    'immobilizationpostalcode',
-    'immobilizationcity',
- 'immobilizationcountry',
-    'scenarios'
-]
-
-selected_columns_numerical = [
-    'providerinvoicelineamountwithouttax',
-    'providerinvoicelinereferencevatamount',
-    'providerinvoicelinereferenceamountwithouttax',
-    'distancebetweeninterventionplaceanddestination',
-    'daysparked',
-    'days_incidence',
-    'realizedquantityvalue',
-    'fs1_provider_assisted_himself',
- 'fs3_appel_police_panne',
- 'kpi2_nb_cases_provider_client',
- 'kpi3_nb_souscriptions_client_phone_number',
- 'nb_activated_scenarios'
-]
-
 JSON_FILE = 'metadata.json'
 with open(JSON_FILE, 'r') as f:
     metadata = json.load(f)
